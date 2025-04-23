@@ -1,4 +1,4 @@
-package JavaCore.chapter01.variable.practice;
+package javacore.chapter01.variable.practice;
 
 public class PracticeOperatorArithmetic {
 

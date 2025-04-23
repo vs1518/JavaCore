@@ -1,4 +1,4 @@
-package JavaCore.chapter01.variable.exercise;
+package javacore.chapter01.variable.exercise;
 
 public class PrimitiveOverflow {
 
