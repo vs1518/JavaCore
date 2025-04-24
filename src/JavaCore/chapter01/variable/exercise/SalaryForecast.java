@@ -1,34 +1,56 @@
-package javacore.chapter01.variable.exercise;
+package JavaCore.chapter01.variable.exercise;
 
 public class SalaryForecast {
     public static void main (String[] args) {
 
-        //Le salaire brut journalier.
-        double montantPourUneHeure = 25;
-        double a = montantPourUneHeure - (montantPourUneHeure * 25 / 100);
-        double quantiteHeuresParJour = 7.7;
-        double heuresParSemaine = 38.5;
-        double  unMoisEnSemaine = 4;
+        // The daily gross salary.
+        double hourlyGrossAmount = 25;
+        double hoursPerDay = 7.7;
+        double hoursPerWeek = 38.5;
+        short weeksInAMonth = 4;
+        short monthsInAYear = 12;
 
-        //Le salaire brut journalier.
-        System.out.println("Le montant par l'heure net est "+ a);
+        // Solution
 
-        //Le salaire brut journalier.
-        System.out.println( "Le montant par jour net est "+ (montantPourUneHeure - (montantPourUneHeure * 25 / 100)) * quantiteHeuresParJour);
+        // The daily gross salary.
+        double dailyGross = hoursPerDay * hourlyGrossAmount;
 
-        //Le salaire brut hebdomadaire.
-        System.out.println();
-        //
-        //Le salaire brut mensuel.
-        //
-        //Le salaire brut annuel.
-        //
-        //Le salaire net imposable mensuel.
-        //
-        //Le salaire net imposable annuel.
-        //
-        //Le salaire net mensuel, après impôt sur le revenu.
-        //
-        //Le salaire net annuel, après impôt sur le revenu.
+        // The weekly gross salary.
+        double weeklyGross = hoursPerWeek * hourlyGrossAmount;
+
+        // The monthly gross salary.
+        double monthlyGross = weeklyGross * weeksInAMonth;
+
+        // The annual gross salary.
+        double annualGross = monthlyGross * monthsInAYear;
+
+        // The monthly taxable net salary.  taxableMonthlyRate = taxableMonthlyRate - (taxableMonthlyRate * 25 / 100)
+        double monthlyTaxableNetSalary = monthlyGross - (monthlyGross * 25 / 100);
+
+        // The annual taxable net salary.
+        double annualTaxableNetSalary = monthlyTaxableNetSalary * 12;
+
+        // The monthly net salary after income tax.
+        double monthlyNetSalaryAfterIncomeTax = monthlyTaxableNetSalary - (monthlyTaxableNetSalary * 10.5 / 100);
+
+        // The annual net salary after income tax. annualRateAfterTax = annualTaxableRate * 10.5
+        double annualNetSalaryAfterIncomeTax = annualTaxableNetSalary - (annualTaxableNetSalary * 10.5 / 100);
+
+        System.out.println("Daily Gross Salary is equal to " + dailyGross);
+        
+        System.out.println("Weekly Gross Salary is equal to " + weeklyGross);
+        
+        System.out.println("Monthly Gross Salary is equal to " + monthlyGross);
+        
+        System.out.println("Annual Gross Salary is equal to " + annualGross);
+        
+        System.out.println("Monthly Taxable Net Salary is equal to " + monthlyTaxableNetSalary);
+        
+        System.out.println("Annual Taxable Net Salary is equal to " + annualTaxableNetSalary);
+        
+        System.out.println("Monthly Net Salary After Income Tax is equal to " + monthlyNetSalaryAfterIncomeTax);
+        
+        System.out.println("Annual Net Salary After Income Tax is equal to " + annualNetSalaryAfterIncomeTax);
+
     }
 }
