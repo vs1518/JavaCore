@@ -3,9 +3,9 @@ package javacore.chapter01.variable.exercise;
 public class FirstOperations {
     public static void main(String[] args) {
 
-    int c = 10;
-    int d = 8;
-    int sum = c + d;
+        int c = 10;
+        int d = 8;
+        int sum = c + d;
 
         System.out.println(c += d); // c = c + d;
 
@@ -18,9 +18,9 @@ public class FirstOperations {
         System.out.println("La somme de c et d = " + sum);
 
 
-    int e = 1 * 5 + 2;
-    int f = 1 * (5 + 2);
-    int g = ((2 * 5) - 2 / (4-2)) -1;
+        int e = 1 * 5 + 2;
+        int f = 1 * (5 + 2);
+        int g = ((2 * 5) - 2 / (4-2)) -1;
 
         System.out.println(e + f);
         System.out.println(g);
