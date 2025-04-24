@@ -23,6 +23,7 @@ public class FirstOperations {
         int g = ((2 * 5) - 2 / (4-2)) -1;
 
         System.out.println(e + f);
+        
         System.out.println(g);
 
 
