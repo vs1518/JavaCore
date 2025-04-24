@@ -11,9 +11,13 @@ public class PrimitiveOverflow {
         int yearSeconds = 365 * daySeconds;
 
         System.out.println(hourSeconds);
+        
         System.out.println(daySeconds);
+        
         System.out.println(weekSeconds);
+        
         System.out.println(monthSeconds);
+        
         System.out.println(yearSeconds);
 
 
