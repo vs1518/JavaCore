@@ -13,7 +13,7 @@ public class VariablesPermutation {
         int permuteVariableB = a;
 
         //j'affecte la valeur de a à b
-        b = a;
+        a = b;
 
         System.out.println( "La valeur a permuté est égal à " + permuteVariableA );
 
