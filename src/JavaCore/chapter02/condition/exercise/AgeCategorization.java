@@ -5,8 +5,8 @@ public class AgeCategorization {
     public static void main(String[]args) {
 
         //les différentes valeurs il faut tester
-        // 9 ; 21 ; 29 ; 70
-        int age = 10;
+        // 9 ; 15 ; 21 ; 29 ; 70
+        int age = 15;
 
         //Les différentes catégories d'age suivantes :
         //
