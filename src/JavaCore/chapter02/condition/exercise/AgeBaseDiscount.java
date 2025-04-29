@@ -24,11 +24,11 @@ public class AgeBaseDiscount {
         double priceForOlderPassenger = priceWithoutSoldes * 0.50;
 
         if ( age >= 65 ) {
-            System.out.println("Vous êtes éligible à la réduction, vous allez payer " + priceForOlderPassenger + " euros");
+            System.out.println("Vous êtes éligible à la réduction Senior, vous allez payer " + priceForOlderPassenger + " euros");
         }
 
         else if ( age <= 25 ) {
-            System.out.println("Vous êtes éligible à la réduction, vous allez payer " + priceForYoungPassenger + " euros");
+            System.out.println("Vous êtes éligible à la réduction Junior, vous allez payer " + priceForYoungPassenger + " euros");
         }
 
         else {
