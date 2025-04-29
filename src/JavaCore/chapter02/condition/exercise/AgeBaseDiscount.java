@@ -32,7 +32,7 @@ public class AgeBaseDiscount {
         }
 
         else {
-            System.out.println("Désolé , vous n'êtes pas éligible à la réduction. Vous allez payer " + priceWithoutSoldes + " euros");
+            System.out.println("Désolé , vous n'êtes pas éligible à la réduction. Vous allez payer le tarif plein" + priceWithoutSoldes + " euros");
         }
     }
 }
