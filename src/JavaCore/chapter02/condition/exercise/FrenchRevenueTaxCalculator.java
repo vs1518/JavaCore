@@ -34,20 +34,22 @@ public class FrenchRevenueTaxCalculator {
         //*Ajouter l'abattement de 10%
         double salary = 200000;
         double deduction = salary * 10 / 100;
-        double amountAfterDeduction = salary- (salary*10 / 100);
+        double amountAfterDeduction = salary- (salary * 10 / 100);
         double firstBracket = 0;
         double secondeBracket = ((28797 - 11294) * 11) / 100;
         double thirdBracket = ((82341 - 28797) * 30) / 100;
         double forthBracket = ((177106 - 82341) * 41) / 100;
         double fifthBracket = ((amountAfterDeduction - 177106) * 45) / 100;
-        double amountNeedToPay = secondeBracket + thirdBracket + forthBracket + fifthBracket;
+        double amountNeedToPay = firstBracket + secondeBracket + thirdBracket + forthBracket + fifthBracket;
 
-        //
-        if (salary > 177106);
+
+        if (amountAfterDeduction > 177106);
         System.out.println("You earn " + salary + " euros per year net. " + "Your first deduction applied to the " +
                 "taxable net salary before calculating the income tax is " + deduction +
                 " and the amount you need to pays is " + amountNeedToPay);
 
 
+
+        
     }
 }
