@@ -1,4 +1,4 @@
-package JavaCore.chapter02.condition.exercise;
+package javacore.chapter02.condition.exercise;
 
 public class FrenchRevenueTaxCalculator {
 
@@ -32,24 +32,47 @@ public class FrenchRevenueTaxCalculator {
         //*Calculez le % que représente le montant total d'Impôts sur le Revenu par rapport au salaire donné
         //
         //*Ajouter l'abattement de 10%
+        //double salary = 200000;
+        //double deduction = salary * 10 / 100;
+        //double amountAfterDeduction = salary- (salary * 10 / 100);
+        //double firstBracket = 0;
+        //double secondBracket = ((28797 - 11294) * 11) / 100;
+        //double thirdBracket = ((82341 - 28797) * 30) / 100;
+        //double forthBracket = ((177106 - 82341) * 41) / 100;
+        //double fifthBracket = ((amountAfterDeduction - 177106) * 45) / 100;
+        //double amountNeedToPay = firstBracket + secondeBracket + thirdBracket + forthBracket + fifthBracket;
+
+
+        //if (amountAfterDeduction > 177106);
+        //System.out.println("You earn " + salary + " euros per year net. " + "Your first deduction applied to the " +
+               // "taxable net salary before calculating the income tax is " + deduction +
+              //  " and the amount you need to pays is " + amountNeedToPay);
+        double lowSecondBracket = 11295;
+        double highSecondBracket = 28797;
+
+        double lowThirdBracket = 28798;
+        double highThirdBracket = 82341;
+
+        double lowForthBracket = 82342;
+        double highForthBracket = 177106;
+
+        double lowFifthBracket = 177106;
+
         double salary = 200000;
         double deduction = salary * 10 / 100;
-        double amountAfterDeduction = salary- (salary * 10 / 100);
-        double firstBracket = 0;
-        double secondeBracket = ((28797 - 11294) * 11) / 100;
-        double thirdBracket = ((82341 - 28797) * 30) / 100;
-        double forthBracket = ((177106 - 82341) * 41) / 100;
-        double fifthBracket = ((amountAfterDeduction - 177106) * 45) / 100;
-        double amountNeedToPay = firstBracket + secondeBracket + thirdBracket + forthBracket + fifthBracket;
 
+        double firstBracket = 11294 - 0;
+        double secondBracket = highSecondBracket - firstBracket;
+        double thirdBracket = highThirdBracket - secondBracket;
+        double forthBracket = highForthBracket - thirdBracket;
+        double fifthBracket = deduction - lowFifthBracket;
+        double additionalAmount = firstBracket + secondBracket + thirdBracket + forthBracket +fifthBracket;
+        if (deduction >= lowFifthBracket) {
 
-        if (amountAfterDeduction > 177106);
-        System.out.println("You earn " + salary + " euros per year net. " + "Your first deduction applied to the " +
-                "taxable net salary before calculating the income tax is " + deduction +
-                " and the amount you need to pays is " + amountNeedToPay);
+            System.out.println("Your tax is " + additionalAmount);
+        }
 
-
-
-        
     }
+
+
 }
