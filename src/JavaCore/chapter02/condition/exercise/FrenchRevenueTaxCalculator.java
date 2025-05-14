@@ -34,29 +34,33 @@ public class FrenchRevenueTaxCalculator {
 //
 //
 
-        double salary = 40000;
-        double deduction = salary- (salary * 10 / 100);
+        double salary = 20000;
+        double salaryNetImposable = salary- (salary * 10 / 100);
         double tax = 0;
 
-        if (deduction > 177106) {
-            double differenceBetween = deduction - 177106;
+        if (salaryNetImposable > 177106) {
+            double differenceBetween = (salaryNetImposable) - 177106;
             tax += differenceBetween * 0.45;
+            salaryNetImposable -= differenceBetween;
         }
 
-        if (deduction > 82341) {
-            double differenceBetween = deduction - 82341;
+        if (salaryNetImposable > 82341) {
+            double differenceBetween = (salaryNetImposable) - 82341;
             tax += differenceBetween * 0.41;
+            salaryNetImposable -= differenceBetween;
         }
 
-        if (deduction > 28797) {
-            double differenceBetween = deduction - 28797;
+        if (salaryNetImposable > 28797) {
+            double differenceBetween = (salaryNetImposable) - 28797;
             tax += differenceBetween * 0.30;
+            salaryNetImposable -= differenceBetween;
 
         }
 
-        if (deduction > 11294) {
-            double differenceBetween = deduction - 11294;
+        if (salaryNetImposable > 11294) {
+            double differenceBetween = (salaryNetImposable) - 11294;
             tax += differenceBetween * 0.11;
+            salaryNetImposable -= differenceBetween;
         }
 
         System.out.println("Impot est égal " + tax + " euros.");
