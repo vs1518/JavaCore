@@ -23,51 +23,60 @@ public class CoinChangerV1 {
         int totalBill = 105;
 
         //montantPayé
-        int amountPaid = 120;
+        int amountPaid = 155;
 
         int cashChange = amountPaid - totalBill;
 
+        if (cashChange < 0) {
 
-        int addingTheDifference = totalBill - amountPaid;
-
-        if (amountPaid > totalBill) {
-
-            System.out.println("Your total bill is " + totalBill + ". You've paid " + amountPaid +
-                    ". Your change is " + cashChange);
+            System.out.println("You need to add " + (-cashChange) + " euros for paying for the bill");
         }
 
-        else if (amountPaid < totalBill) {
+        if (cashChange > 0) {
 
-            System.out.println("Your total bill is " + totalBill + ". You've paid " + amountPaid +
-                    ". You need to add " + addingTheDifference);
+            System.out.println("You will receive " + (cashChange) + " euros of change");
         }
 
-        else if (cashChange % 50 == 1) {
+        if (cashChange == 0) {
 
-            System.out.println();
-
-        }
-        else if (cashChange % 20 == 1) {
-
-        }
-        else if (cashChange % 10 == 1) {
-
-        }
-        else if (cashChange % 2 == 1) {
-
-        }
-
-        else if (cashChange % 1 == 1) {
-
-        }
-
-        else {
-
-            System.out.println("Your total bill is " + totalBill + ". You've paid " + amountPaid +
-                    ". You need nothing to pay.");
+            System.out.println("You’ve paid enough! There’s nothing more to add or change");
         }
 
 
+        int billet50 = cashChange / 50;
+
+        int billet20 = cashChange / 20;
+
+        int billet10 = cashChange / 10;
+
+        int billet2 = cashChange / 2;
+
+        int billet1 = cashChange / 2;
+
+        if (billet50 > 0) {
+
+            System.out.println("You will receive " + " " + billet50 + "paper(s) of 50" );
+        }
+
+        if (billet20 > 0) {
+
+            System.out.println("You will receive " + " " + billet20 + "paper(s) of 20" );
+        }
+
+        if (billet10 > 0) {
+
+            System.out.println("You will receive " + " " + billet10 + "paper(s) of 10" );
+        }
+
+        if (billet2 > 0) {
+
+            System.out.println("You will receive " + " " + billet1 + "coin(s)" );
+        }
+
+        if (billet1 > 0) {
+
+            System.out.println("You will receive " + " " + billet1 + "coin(s)" );
+        }
 
     }
 }
