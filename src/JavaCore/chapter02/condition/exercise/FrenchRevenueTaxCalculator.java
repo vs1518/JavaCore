@@ -32,32 +32,40 @@ public class FrenchRevenueTaxCalculator {
         //*Calculez le % que représente le montant total d'Impôts sur le Revenu par rapport au salaire donné
         //
         //*Ajouter l'abattement de 10%
+
+        // Déclaration des constantes (final)
+        final int TRANCHE_4_MAX = 177106;
+        final int TRANCHE_3_MAX = 82341;
+        final int TRANCHE_2_MAX = 28797;
+        final int TRANCHE_1_MAX = 11294;
+
+
         double salary = 200000;
         double salaryNetImposable = salary- (salary * 10 / 100);
         double tax = 0;
 
 
-        if (salaryNetImposable > 177106) {
-            double differenceBetween = salaryNetImposable - 177106;
+        if (salaryNetImposable > TRANCHE_4_MAX) {
+            double differenceBetween = salaryNetImposable - TRANCHE_4_MAX;
             tax += differenceBetween * 0.45;
             salaryNetImposable -= differenceBetween;
 
         }
 
-        if (salaryNetImposable > 82341) {
-            double differenceBetween = salaryNetImposable - 82341;
+        if (salaryNetImposable > TRANCHE_3_MAX ) {
+            double differenceBetween = salaryNetImposable - TRANCHE_3_MAX ;
             tax += differenceBetween * 0.41;
             salaryNetImposable -= differenceBetween;
         }
 
-        if (salaryNetImposable > 28797) {
-            double differenceBetween = salaryNetImposable - 28797;
+        if (salaryNetImposable > TRANCHE_2_MAX) {
+            double differenceBetween = salaryNetImposable - TRANCHE_2_MAX;
             tax += differenceBetween * 0.30;
             salaryNetImposable -= differenceBetween;
         }
 
-        if (salaryNetImposable > 11294) {
-            double differenceBetween = salaryNetImposable - 11294;
+        if (salaryNetImposable > TRANCHE_1_MAX) {
+            double differenceBetween = salaryNetImposable - TRANCHE_1_MAX;
             tax += differenceBetween * 0.11;
             salaryNetImposable -= differenceBetween;
         }
