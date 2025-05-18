@@ -33,23 +33,38 @@ public class FrenchRevenueTaxCalculator {
         //
         //*Ajouter l'abattement de 10%
         double salary = 200000;
-        double deduction = salary * 10 / 100;
-        double amountAfterDeduction = salary- (salary * 10 / 100);
-        double firstBracket = 0;
-        double secondeBracket = ((28797 - 11294) * 11) / 100;
-        double thirdBracket = ((82341 - 28797) * 30) / 100;
-        double forthBracket = ((177106 - 82341) * 41) / 100;
-        double fifthBracket = ((amountAfterDeduction - 177106) * 45) / 100;
-        double amountNeedToPay = firstBracket + secondeBracket + thirdBracket + forthBracket + fifthBracket;
+        double salaryNetImposable = salary- (salary * 10 / 100);
+        double tax = 0;
 
 
-        if (amountAfterDeduction > 177106);
-        System.out.println("You earn " + salary + " euros per year net. " + "Your first deduction applied to the " +
-                "taxable net salary before calculating the income tax is " + deduction +
-                " and the amount you need to pays is " + amountNeedToPay);
+        if (salaryNetImposable > 177106) {
+            double differenceBetween = salaryNetImposable - 177106;
+            tax += differenceBetween * 0.45;
+            salaryNetImposable -= differenceBetween;
 
+        }
 
+        if (salaryNetImposable > 82341) {
+            double differenceBetween = salaryNetImposable - 82341;
+            tax += differenceBetween * 0.41;
+            salaryNetImposable -= differenceBetween;
+        }
 
-        
+        if (salaryNetImposable > 28797) {
+            double differenceBetween = salaryNetImposable - 28797;
+            tax += differenceBetween * 0.30;
+            salaryNetImposable -= differenceBetween;
+        }
+
+        if (salaryNetImposable > 11294) {
+            double differenceBetween = salaryNetImposable - 11294;
+            tax += differenceBetween * 0.11;
+            salaryNetImposable -= differenceBetween;
+        }
+
+        double taxRate = tax * 100 / salary;
+
+        System.out.println("Impot est égal " + tax + " euros." + "  Le montant total d'Impôts sur le Revenu par " +
+                "rapport au salaire donné est " + taxRate + "%");
     }
 }
