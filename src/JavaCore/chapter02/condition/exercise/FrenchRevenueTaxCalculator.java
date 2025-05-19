@@ -34,38 +34,37 @@ public class FrenchRevenueTaxCalculator {
         //*Ajouter l'abattement de 10%
 
         // Déclaration des constantes (final)
-        final int TRANCHE_4_MAX = 177106;
-        final int TRANCHE_3_MAX = 82341;
-        final int TRANCHE_2_MAX = 28797;
-        final int TRANCHE_1_MAX = 11294;
+        final int TAX_41_PERCENT_LIMIT_FRANCE = 177106;
+        final int TAX_30_PERCENT_LIMIT_FRANCE = 82341;
+        final int TAX_11_PERCENT_LIMIT_FRANCE = 28797;
+        final int TAX_FREE_LIMIT_FRANCE = 11294;
 
 
         double salary = 200000;
-        double salaryNetImposable = salary- (salary * 10 / 100);
+        double salaryNetImposable = salary - (salary * 10 / 100);
         double tax = 0;
 
 
-        if (salaryNetImposable > TRANCHE_4_MAX) {
-            double differenceBetween = salaryNetImposable - TRANCHE_4_MAX;
+        if (salaryNetImposable > TAX_41_PERCENT_LIMIT_FRANCE) {
+            double differenceBetween = salaryNetImposable - TAX_41_PERCENT_LIMIT_FRANCE;
             tax += differenceBetween * 0.45;
             salaryNetImposable -= differenceBetween;
-
         }
 
-        if (salaryNetImposable > TRANCHE_3_MAX ) {
-            double differenceBetween = salaryNetImposable - TRANCHE_3_MAX ;
+        if (salaryNetImposable > TAX_30_PERCENT_LIMIT_FRANCE ) {
+            double differenceBetween = salaryNetImposable - TAX_30_PERCENT_LIMIT_FRANCE ;
             tax += differenceBetween * 0.41;
             salaryNetImposable -= differenceBetween;
         }
 
-        if (salaryNetImposable > TRANCHE_2_MAX) {
-            double differenceBetween = salaryNetImposable - TRANCHE_2_MAX;
+        if (salaryNetImposable > TAX_11_PERCENT_LIMIT_FRANCE) {
+            double differenceBetween = salaryNetImposable - TAX_11_PERCENT_LIMIT_FRANCE;
             tax += differenceBetween * 0.30;
             salaryNetImposable -= differenceBetween;
         }
 
-        if (salaryNetImposable > TRANCHE_1_MAX) {
-            double differenceBetween = salaryNetImposable - TRANCHE_1_MAX;
+        if (salaryNetImposable > TAX_FREE_LIMIT_FRANCE) {
+            double differenceBetween = salaryNetImposable - TAX_FREE_LIMIT_FRANCE;
             tax += differenceBetween * 0.11;
             salaryNetImposable -= differenceBetween;
         }

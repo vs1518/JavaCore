@@ -23,7 +23,7 @@ public class CoinChangerV1 {
         int totalBill = 105;
 
         //montantPayé
-        int amountPaid = 155;
+        int amountPaid = 208;
 
         int cashChange = amountPaid - totalBill;
 
@@ -32,26 +32,33 @@ public class CoinChangerV1 {
             System.out.println("You need to add " + (-cashChange) + " euros for paying for the bill");
         }
 
-        if (cashChange > 0) {
+        else if (cashChange > 0) {
 
             System.out.println("You will receive " + (cashChange) + " euros of change");
         }
 
-        if (cashChange == 0) {
+        else {
 
             System.out.println("You’ve paid enough! There’s nothing more to add or change");
         }
 
+        int billet = 0;
 
         int billet50 = cashChange / 50;
+        cashChange = cashChange % 50;
 
         int billet20 = cashChange / 20;
+        cashChange = cashChange % 20;
+
 
         int billet10 = cashChange / 10;
+        cashChange = cashChange % 10;
 
         int billet2 = cashChange / 2;
+        cashChange = cashChange % 2;
 
-        int billet1 = cashChange / 2;
+        int billet1 = cashChange / 1;
+        cashChange = cashChange % 1;
 
         if (billet50 > 0) {
 
