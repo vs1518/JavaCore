@@ -20,29 +20,30 @@ public class CoinChangerV1 {
 
         //factureTotal
         //Valeurs à tester -> 30 ; 65 ; 88
-        int totalBill = 105;
+
+        int totalBill = 150;
 
         //montantPayé
         int amountPaid = 208;
 
         int cashChange = amountPaid - totalBill;
 
+
         if (cashChange < 0) {
 
             System.out.println("You need to add " + (-cashChange) + " euros for paying for the bill");
         }
 
-        else if (cashChange > 0) {
-
-            System.out.println("You will receive " + (cashChange) + " euros of change");
-        }
-
-        else {
+        else if (cashChange == 0) {
 
             System.out.println("You’ve paid enough! There’s nothing more to add or change");
         }
 
-        int billet = 0;
+        else {
+
+            System.out.println("You will receive " + cashChange + " euros of change");
+        }
+
 
         int billet50 = cashChange / 50;
         cashChange = cashChange % 50;
@@ -77,12 +78,12 @@ public class CoinChangerV1 {
 
         if (billet2 > 0) {
 
-            System.out.println("You will receive " + " " + billet1 + "coin(s)" );
+            System.out.println("You will receive " + " " + billet2 + "coin(s) of 2" );
         }
 
         if (billet1 > 0) {
 
-            System.out.println("You will receive " + " " + billet1 + "coin(s)" );
+            System.out.println("You will receive " + " " + billet1 + "coin(s) of 1" );
         }
 
     }
