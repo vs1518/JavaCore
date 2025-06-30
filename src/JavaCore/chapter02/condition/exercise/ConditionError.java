@@ -11,7 +11,7 @@ public class ConditionError {
             System.out.println("Vous êtes mineur et bientôt majeur!");
 
         }
-        else if(age >= 18 && age <= 59) {
+        else if(age > 17) {
 
             System.out.println("Vous êtes majeur et adult");
 
