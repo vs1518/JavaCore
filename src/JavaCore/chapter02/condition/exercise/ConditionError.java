@@ -4,22 +4,22 @@ public class ConditionError {
 
     public static void main(String[] args) {
 
-        int age = 77;
+        int age = 101;
 
         if(age <= 17) {
 
             System.out.println("Vous êtes mineur et bientôt majeur!");
 
         }
-        else if(age > 17) {
+        else if(age <= 59) {
 
             System.out.println("Vous êtes majeur et adult");
 
         }
 
-        else if(age >= 60 && age <= 100) {
+        else if(age <= 100) {
 
-            System.out.println("Vous n'êtes plus tout jeune.");
+            System.out.println("Vous n'êtes plus du tout jeune.");
 
         }
 
