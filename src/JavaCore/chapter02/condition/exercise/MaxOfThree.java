@@ -21,7 +21,7 @@ public class MaxOfThree {
 
     public static void main(String[] args) {
 
-        int a = 19;
+        int a = 21;
         int b = 11;
         int c = 19;
 
