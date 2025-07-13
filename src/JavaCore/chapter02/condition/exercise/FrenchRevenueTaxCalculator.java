@@ -40,7 +40,7 @@ public class FrenchRevenueTaxCalculator {
         final int TAX_FREE_LIMIT_FRANCE = 11294;
 
 
-        double salary = 200000;
+        double salary = 52000;
         double salaryNetImposable = salary - (salary * 10 / 100);
         double tax = 0;
 
