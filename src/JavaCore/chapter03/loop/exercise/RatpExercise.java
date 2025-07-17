@@ -4,6 +4,7 @@ public class RatpExercise {
 
     public static void main(String[] args) {
         Omelette omelette = new Omelette(3, 10, 1, 1);
+        System.out.println("J'ai les ingrédients : 3 œufs, 10 ml l'huile d'olive, du sel, et du poivre");
         omelette.preparation();
         omelette.cuire();
         omelette.servir();
@@ -32,24 +33,39 @@ class Omelette {
     }
 
     public void preparation() {
-        if (nombreOeufs > 0 && bolPresente && fourchettePresente) {
-            System.out.println("Cassez les œufs dans le bol.");
-            if (quantiteSel > 0) {
-                System.out.println("Ajoutez le sel.");
+        if (nombreOeufs > 0 && bolPresente) {
+            System.out.println("Cassez les œufs dans le bol ");
+
+            if (fourchettePresente){
+                System.out.println("Battez les œufs à la fourchette");
             }
-            if (quantitePoivre > 0) {
-                System.out.println("Ajoutez le poivre.");
+
+
+            if (quantiteSel  > 0 && quantitePoivre > 0) {
+                System.out.println("Ajoutez le sel et le poivre et mélangez");
+
             }
+
         } else {
             System.out.println("Désolé, sans œufs, il n'y a pas d'omelette.");
         }
     }
 
     public void cuire() {
-        if (poelePresente && plaqueDeCuissonPresente) {
-            System.out.println("Commencez une cuisson de l'omelette.");
-            estCuite = true;
-        } else {
+        if (plaqueDeCuissonPresente && poelePresente) {
+            System.out.println("Allumez le feu et posez la poêle dessus");
+        }
+
+        if (quantiteHuileOlive > 0) {
+            System.out.println("Versez l’huile d’olive dans la poêle et attendez que l’huile soit chaude");
+        }
+
+        //if (quantiteHuileOlive > 0) {
+        //    System.out.println("");
+         //   estCuite = true;
+        //}
+
+        else {
             System.out.println("Impossible de cuire l'omelette sans poêle ou plaque de cuisson.");
         }
     }
