@@ -60,7 +60,8 @@ class Omelette {
             System.out.println("Versez l’huile d’olive dans la poêle et attendez que l’huile soit chaude");
         }
 
-        //if (quantiteHuileOlive > 0) {
+        //    Versez les œufs battus dans la poêle à feu vif - à reflecjir
+        //    if (quantiteHuileOlive > 0) {
         //    System.out.println("");
          //   estCuite = true;
         //}
