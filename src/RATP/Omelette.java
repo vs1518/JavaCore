@@ -25,8 +25,9 @@ public class Omelette {
 
         System.out.println("Ingrédients suffisants :");
         System.out.println("- " + nbOeufs + " œufs");
-        System.out.println("- " + ingredients.getOrDefault(Ingredient.SEL, 0) + " pincée(s) de sel");
-        System.out.println("- " + nbHuile + " cuillère(s) d'huile");
+        System.out.println("- " + ingredients.getOrDefault(Ingredient.SEL, 0) + " pincée de sel");
+        System.out.println("- " + ingredients.getOrDefault(Ingredient.POIVRE, 0) + " pincée de poivre");
+        System.out.println("- " + nbHuile + " cuillère d'huile");
     }
 
     // Étapes de la recette
