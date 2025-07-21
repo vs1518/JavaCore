@@ -4,16 +4,16 @@ public class WhileLoopExampleV2 {
 
     public static void main(String[] args) {
 
-        int loopCounter = 1;
+        int loopCounter = 0;
 
-        while (loopCounter <= 10){
+        while (loopCounter < 10){
 
-            System.out.println("Nombre ascendent affiché est " + loopCounter);
             loopCounter++;
+            System.out.println("Nombre ascendent affiché est " + loopCounter);
+
         }
 
-        loopCounter = 10;
-        while (loopCounter > 0){
+        while (loopCounter >= 1){
 
             System.out.println("Nombre descendant affiché est " + loopCounter);
             loopCounter--;
