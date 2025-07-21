@@ -1,4 +1,4 @@
-package JavaCore.chapter02.condition.practice;
+package javacore.chapter02.condition.practice;
 
 public class PracticeVariableScope {
 

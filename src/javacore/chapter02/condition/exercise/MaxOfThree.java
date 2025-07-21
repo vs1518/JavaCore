@@ -1,4 +1,4 @@
-package JavaCore.chapter02.condition.exercise;
+package javacore.chapter02.condition.exercise;
 
 public class MaxOfThree {
 
