@@ -1,4 +1,4 @@
-package JavaCore.chapter03.loop.exercise;
+package javacore.chapter03.loop.exercise;
 
 public class SmallestDivisorFinder {
 
