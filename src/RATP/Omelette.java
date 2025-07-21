@@ -25,51 +25,119 @@ public class Omelette {
 
         System.out.println("Ingrédients suffisants :");
         System.out.println("- " + nbOeufs + " œufs");
-        System.out.println("- " + ingredients.getOrDefault(Ingredient.SEL, 0) + " pincée de sel");
-        System.out.println("- " + ingredients.getOrDefault(Ingredient.POIVRE, 0) + " pincée de poivre");
-        System.out.println("- " + nbHuile + " cuillère d'huile");
+        System.out.println("- " + ingredients.getOrDefault(Ingredient.SEL, 0) + " pincée(s) de sel");
+        System.out.println("- " + nbHuile + " cuillère(s) d'huile");
     }
 
+    // Étapes de la recette
     public void casserOeufs() {
-        System.out.println("Casser les œufs dans un bol.");
-    }
-
-    public void ajouterSel() {
-        System.out.println("Ajouter une pincée de sel.");
-    }
-
-    public void ajouterPoivre() {
-        System.out.println("Ajouter une pincée de poivre.");
+        System.out.println("J'ai les ingrédients : des œufs, l'huile d'olive, du sel, et du poivre");
+        System.out.println("Cassez les œufs dans un bol.");
     }
 
     public void battreOeufs() {
-        System.out.println("Battre les œufs avec le sel.");
+        System.out.println("Battez les œufs à la fourchette.");
     }
 
-    public void chaufferPoele() {
-        System.out.println("Chauffer la poêle avec un peu d'huile.");
+    public void ajouterSel() {
+        System.out.println("Ajoutez le sel.");
     }
 
-    public void verserDansPoele() {
-        System.out.println("Verser les œufs battus dans la poêle chaude.");
+    public void ajouterPoivre() {
+        System.out.println("Ajoutez le poivre.");
     }
 
-    public void cuire() {
-        System.out.println("Cuire à feu moyen jusqu'à ce que l'omelette soit dorée.");
+    public void melanger() {
+        System.out.println("Je mélange.");
+    }
+
+    public void allumerFeu() {
+        System.out.println("Allumez le feu.");
+    }
+
+    public void poserPoele() {
+        System.out.println("Posez la poêle dessus.");
+    }
+
+    public void verserHuile() {
+        System.out.println("Versez l’huile d’olive dans la poêle.");
+    }
+
+    public void attendreHuileChauffe() {
+        System.out.println("Attendez que l’huile soit chaude.");
+    }
+
+    public void verserOeufs() {
+        System.out.println("Versez les œufs battus dans la poêle à feu vif.");
+    }
+
+    public void baisserFeu() {
+        System.out.println("Baissez le feu dès que les bords commencent à cuire.");
+    }
+
+    public void laisserCuire() {
+        System.out.println("Laissez cuire.");
+    }
+
+    public void ramenerBords() {
+        System.out.println("Ramenez les bords cuits de l’omelette vers le centre.");
+    }
+
+    public void repeterRamener() {
+        System.out.println("Répétez l’action jusqu’à ce que le centre commence à cuire.");
+    }
+
+    public void secouerPoele() {
+        System.out.println("Secouez la poêle pour éviter que l’omelette ne colle.");
+    }
+
+    public void verifierBaveuse() {
+        System.out.println("Vérifiez si l’omelette est baveuse.");
+    }
+
+    public void verifierCuisson() {
+        System.out.println("Vérifiez si l’omelette est cuite.");
+    }
+
+    public void plierOmelette() {
+        System.out.println("Pliez l’omelette en deux.");
+    }
+
+    public void preparerAssiette() {
+        System.out.println("Je prépare une assiette tiède.");
+    }
+
+    public void deposerDansAssiette() {
+        System.out.println("Déposez l’omelette sur une assiette tiède.");
     }
 
     public void servir() {
-        System.out.println("Servir l'omelette chaude.");
+        System.out.println("Servez immédiatement.");
     }
 
     public void preparerOmelette() {
         casserOeufs();
+        battreOeufs();
         ajouterSel();
         ajouterPoivre();
-        battreOeufs();
-        chaufferPoele();
-        verserDansPoele();
-        cuire();
+        melanger();
+
+        allumerFeu();
+        poserPoele();
+        verserHuile();
+        attendreHuileChauffe();
+        verserOeufs();
+        baisserFeu();
+        laisserCuire();
+        ramenerBords();
+        repeterRamener();
+        secouerPoele();
+        verifierBaveuse();
+        verifierCuisson();
+        plierOmelette();
+
+        preparerAssiette();
+        deposerDansAssiette();
         servir();
     }
 }
