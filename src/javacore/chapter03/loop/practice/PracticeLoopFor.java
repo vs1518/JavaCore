@@ -32,5 +32,27 @@ public class PracticeLoopFor {
 
         System.out.println("Somme des nombres de 1 à 100 : " + resultFor);
 
+
+
+        for (int a = 1 ; a <= 100 ; a++)  {
+
+            if (a % 2 == 0) {
+
+                int resultForIf = 0;
+
+                for (int b= 1 ; b <= a ; b++) {
+                    resultForIf += b;
+                }
+
+                System.out.println("Somme des nombres entre 1 et " + a + " : " + resultForIf);
+            }
+            else {
+
+                System.out.println("Le nombre suivant est impair : " + a);
+            }
+
+        }
+
+
     }
 }
