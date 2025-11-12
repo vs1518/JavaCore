@@ -7,20 +7,20 @@ public class PerfectNumberFinder {
         int start = 1;
         int end = 1000;
 
-        for (int number = start; number <= end; number++) {
+        for (int potentialPerfectNumber = start; potentialPerfectNumber <= end; potentialPerfectNumber++) {
 
-            int sum = 0;
+            int divisorSum = 0;
 
-            for (int divisor = 1; divisor < number; divisor++) {
+            for (int potentialDivisor = 1; potentialDivisor < potentialPerfectNumber; potentialDivisor++) {
 
-                if (number % divisor == 0) {
+                if (potentialPerfectNumber % potentialDivisor == 0) {
 
-                    sum = sum + divisor;
+                    divisorSum = divisorSum + potentialDivisor;
                 }
             }
 
-            if (sum == number) {
-                System.out.println(number + "est un nombre parfait");
+            if (divisorSum == potentialPerfectNumber) {
+                System.out.println(potentialPerfectNumber + " est un nombre parfait");
             }
         }
 
