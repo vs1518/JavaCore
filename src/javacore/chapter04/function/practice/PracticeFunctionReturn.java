@@ -4,6 +4,8 @@ public class PracticeFunctionReturn {
 
     public static void main(String[] args) {
 
+        //return; // Stop main execution (like a break in a loop)
+
         int number1 = 2;
         int number2 = 5;
 
@@ -21,6 +23,8 @@ public class PracticeFunctionReturn {
     }
 
     public static int sum( int number1,  int number2) {
+
+        // return 1; // Generating a "Unreachable Statement"
 
         int result = number1 + number2;
 
